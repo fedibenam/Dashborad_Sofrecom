@@ -3,8 +3,8 @@
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "editor.codeActionsOnSave": {
-        "source.fixAll.tslint": true,
-        "source.organizeImports": false
+        "source.fixAll.tslint": "explicit",
+        "source.organizeImports": "never"
     },
     "editor.formatOnSave": false,
     "javascript.format.enable": true,

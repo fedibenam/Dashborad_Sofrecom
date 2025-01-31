@@ -1,1 +1,198 @@
+// Import Variables
 @import 'styles/variables.scss';
+
+// Color Palette - More Modern & Consistent
+$primary-color: #ff6b00; // Sofrecom Orange (Slightly Softer)
+$dark-background: #121212; // Modern Dark Gray
+$card-background: #1e1e1e; // Darker for depth
+$text-light: #e0e0e0; // Soft white for text
+$input-bg: #252525; // Modern dark input fields
+$shadow: rgba(0, 0, 0, 0.2);
+
+
+// Fullscreen Layout
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #121212, #2a2a2a, #ff6b00); /* Deep to warm gradient */
+  }
+  
+
+// Flexbox Layout for Two-Column Login
+.login-content {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  max-width: 1000px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 10px 30px $shadow;
+}
+
+// Left Side Styling (Image + Branding)
+.left-card {
+  width: 45%;
+  background: $primary-color;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  text-align: center;
+}
+
+.login-image {
+  width: 90px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.welcome-text {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+// Right Side Styling (Login Form)
+.right-card {
+  width: 55%;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $card-background;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background: $card-background;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-title {
+  font-size: 22px;
+  color: $text-light;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #bdbdbd;
+}
+
+// Input Fields
+.input-container {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  background: $input-bg;
+  border: none;
+  color: $text-light;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+
+  &::placeholder {
+    color: #888;
+  }
+
+  &:focus {
+    outline: 2px solid $primary-color;
+    box-shadow: 0px 0px 10px rgba($primary-color, 0.5);
+  }
+}
+
+// Remember Me & Forgot Password
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.remember-me {
+  font-size: 14px;
+  color: #bdbdbd;
+}
+
+.forgot-password {
+  font-size: 14px;
+  color: $primary-color;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
+
+// Login Button
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  background: $primary-color !important;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: darken($primary-color, 10%) !important;
+  }
+}
+
+// Signup Link
+.card-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signup-text {
+  font-size: 14px;
+  color: #bdbdbd;
+}
+
+.signup-text a {
+  color: $primary-color;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .login-content {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .left-card {
+    width: 100%;
+    padding: 40px;
+  }
+
+  .right-card {
+    width: 100%;
+    padding: 40px;
+  }
+}
